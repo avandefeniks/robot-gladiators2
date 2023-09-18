@@ -4,11 +4,11 @@ var playerAttack = 10;
 var playerMoney = 10;
 // console.log(playerName, playerHealth, playerAttack);
 
-var enemyName = "Roboto";
+var enemyNames = ["Roboto", "Amy Android", "Robo Rumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-function fight() {
+function fight(enemyName) {
     // alert players that they are starting a round
     window.alert("Welcome to Robot Gladiators!");
 
@@ -65,4 +65,12 @@ function fight() {
 
 };
 
-fight();
+// Game States
+// "WIN" - Player robot has defeated all enemy-robots
+//    * Fight all enemy-robots
+//    * Defeat each enemy-robot
+// "LOSE" - Player robot's health is zero or less
+
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
